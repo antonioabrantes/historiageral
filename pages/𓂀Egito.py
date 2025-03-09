@@ -7,7 +7,7 @@ def load_data():
     return df
 
 # Configuração da página do Streamlit
-st.title("Quiz de Perguntas e Respostas")
+st.title("Quiz de Egito")
 
 # Carregar os dados automaticamente
 df = load_data()
@@ -18,7 +18,7 @@ if 'index' not in st.session_state:
 
 # Exibir a pergunta atual
 question = df.iloc[st.session_state.index]
-st.subheader(f"{question['Pergunta']}")
+st.markdown(f"<h4>{question['Pergunta']}</h4>", unsafe_allow_html=True)
 
 st.write(question['Alternativas'])
 # Exibir alternativas garantindo que seja string
