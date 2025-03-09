@@ -28,6 +28,14 @@ options_color = []
 for option in options:
     options_color.append(f"<p style='color:green; font-weight:bold;'>{option}</p>")
 
+for i, option in enumerate(options_color):
+    st.markdown(f"""
+        <div>
+            <label>{option}</label>
+            <input type="radio" name="alternativa" value="{i}">
+        </div>
+    """, unsafe_allow_html=True)
+    
 if options_color:
     selected_option = st.radio("Escolha a alternativa correta:", options_color)
 else:
