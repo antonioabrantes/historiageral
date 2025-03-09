@@ -19,6 +19,10 @@ df = load_data()
 if 'index' not in st.session_state:
     st.session_state.index = 0
 
+if st.button("Reiniciar"):
+    st.session_state.index = 0  # Reinicia o índice ou outras variáveis do estado
+    st.experimental_rerun()  # Pode ser utilizado para garantir a atualização visual
+    
 # Exibir a pergunta atual
 question = df.iloc[st.session_state.index]
 st.markdown(f"<h3>{question['Pergunta']}</h3>", unsafe_allow_html=True)
