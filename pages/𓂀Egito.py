@@ -6,6 +6,7 @@ import pandas as pd
 
 def load_data():
     df = pd.read_csv("enem.csv", sep=';', header=None, names=['Tema', 'Questao', 'ID', 'Origem', 'Pergunta', 'Alternativas', 'Resposta'])
+    df.fillna("", inplace=True)  # Substituir NaN por strings vazias
     return df
 
 # Configuração da página do Streamlit
@@ -25,7 +26,11 @@ st.markdown(f"<h4>{question['Pergunta']}</h4>", unsafe_allow_html=True)
 # st.markdown(question['Alternativas'])
 # Exibir alternativas garantindo que seja string
 options = [alt.strip() for alt in str(question['Alternativas']).split(';') if alt.strip()]
-selected_option = st.radio("Escolha a alternativa correta:", options)
+if options:
+    selected_option = st.radio("Escolha a alternativa correta:", options)
+else:
+    st.warning("Nenhuma alternativa disponível para esta pergunta.")
+
 
 # Mostrar a resposta correta
 if st.button("Mostrar Resposta"):
