@@ -20,8 +20,8 @@ if 'index' not in st.session_state:
 question = df.iloc[st.session_state.index]
 st.subheader(f"{question['Pergunta']}")
 
-# Exibir alternativas
-options = question['Alternativas'].split('\n')
+# Exibir alternativas garantindo que seja string
+options = str(question['Alternativas']).split('\n')
 selected_option = st.radio("Escolha a alternativa correta:", options)
 
 # Mostrar a resposta correta
