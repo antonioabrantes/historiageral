@@ -53,8 +53,8 @@ html_content += "</table>"
 #        </div>
 #    """, unsafe_allow_html=True)
     
-if options_color:
-    selected_option = st.radio("Escolha a alternativa correta:", options_color)
+if options:
+    selected_option = st.radio("Escolha a alternativa correta:", options)
 else:
     st.warning("Nenhuma alternativa disponível para esta pergunta.")
 
