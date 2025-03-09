@@ -2,6 +2,8 @@ import streamlit as st
 import pandas as pd
 
 # Função para carregar os dados do CSV
+# https://share.streamlit.io/
+
 def load_data():
     df = pd.read_csv("enem.csv", sep=';', header=None, names=['Tema', 'Questao', 'ID', 'Origem', 'Pergunta', 'Alternativas', 'Resposta'])
     return df
@@ -20,7 +22,7 @@ if 'index' not in st.session_state:
 question = df.iloc[st.session_state.index]
 st.markdown(f"<h4>{question['Pergunta']}</h4>", unsafe_allow_html=True)
 
-st.markdown('alternativas')
+st.markdown(question['Alternativas'])
 # Exibir alternativas garantindo que seja string
 # options = str(question['Alternativas']).split('\n')
 # selected_option = st.radio("Escolha a alternativa correta:", options)
