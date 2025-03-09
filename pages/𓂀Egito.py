@@ -21,11 +21,11 @@ if 'index' not in st.session_state:
 
 # Exibir a pergunta atual
 question = df.iloc[st.session_state.index]
-st.markdown(f"<h4>{question['Pergunta']}</h4>", unsafe_allow_html=True)
+st.markdown(f"<h3>{question['Pergunta']}</h3>", unsafe_allow_html=True)
 
 # st.markdown(question['Alternativas'])
 # Exibir alternativas garantindo que seja string
-options = [alt.strip() for alt in str(question['Alternativas']).split(';') if alt.strip()]
+options = [alt.strip() for alt in str(question['Alternativas']).split('#') if alt.strip()]
 if options:
     selected_option = st.radio("Escolha a alternativa correta:", options)
 else:
