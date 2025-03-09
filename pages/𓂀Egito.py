@@ -24,11 +24,12 @@ question = df.iloc[st.session_state.index]
 st.markdown(f"<h3>{question['Pergunta']}</h3>", unsafe_allow_html=True)
 
 options = [alt.strip() for alt in str(question['Alternativas']).split('#') if alt.strip()]
+i = 0
 for option in options:
-    option_color = f"<p style='color:green; font-weight:bold;'>{option}</p>"
+    options_color[i++] = f"<p style='color:green; font-weight:bold;'>{option}</p>"
 
-if options:
-    selected_option = st.radio("Escolha a alternativa correta:", options)
+if options_color:
+    selected_option = st.radio("Escolha a alternativa correta:", options_color)
 else:
     st.warning("Nenhuma alternativa disponível para esta pergunta.")
 
