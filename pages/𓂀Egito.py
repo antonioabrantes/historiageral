@@ -26,7 +26,7 @@ st.markdown(f"<h3>{question['Pergunta']}</h3>", unsafe_allow_html=True)
 options = [alt.strip() for alt in str(question['Alternativas']).split('#') if alt.strip()]
 options_color = []
 for option in options:
-    options_color.append = f"<p style='color:green; font-weight:bold;'>{option}</p>"
+    options_color.append(f"<p style='color:green; font-weight:bold;'>{option}</p>")
 
 if options:
     selected_option = st.radio("Escolha a alternativa correta:", options)
