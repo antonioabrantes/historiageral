@@ -3,30 +3,31 @@ import streamlit as st
 
 # Adicionando título original 
 # https://emojipedia.org/search?q=spy
-st.title('Patent Tools 🚀')
+# https://emojidb.org/pharao-emojis
+st.title('História Geral 🚀')
 
 # Adicionando descrição do projeto
-st.write("Ferramentas que auxiliam o exame de patentes com recursos de Inteligência Artificial (Gemini Google).")
+st.write("Perguntas sobre história geral.")
 
 # Adicionando as diversas ferramentas
 etapas = [
     {
-        "nome": "BatePapo",
-        "icone": "💬",
-        "descricao": "Tire suas dúvidas sobre o novo fluxo de processamento de recurso de pedidos de patente.",
-        "pagina": "[BatePapo](https://patenttools.streamlit.app/BatePapo)"
+        "nome": "Egito",
+        "icone": "𓂀",
+        "descricao": "Antigo Egito.",
+        "pagina": "[Egito](https://historiageral.streamlit.app/Egito)"
     },
     {
-        "nome": "AnalisePatente",
-        "icone": "📄",
-        "descricao": "Uma ferramenta que faz resumo de documentos e destaca as diferenças com o pedido de epatente que você está examinando.",
-        "pagina": "[AnalisePatente](https://patenttools.streamlit.app/AnalisePatente)"
+        "nome": "Mesopotamia",
+        "icone": "🛕",
+        "descricao": "Mesopotamia, Suméria",
+        "pagina": "[Mesopotamia](https://historiageral.streamlit.app/Mesopotamia)"
     },
     {
-        "nome": "Estatísticas",
-        "icone": "📊️",
-        "descricao": "Estatísticas diversas em patentes.",
-        "pagina": "[Estatisticas](https://patenttools.streamlit.app/Estatisticas)"
+        "nome": "GrecoRomano",
+        "icone": "🏺",
+        "descricao": "Grécia e Roma antigas.",
+        "pagina": "[GrecoRomano](https://historiageral.streamlit.app/GrecoRomano)"
     }
 ]
 
