@@ -28,8 +28,8 @@ options_color = []
 for option in options:
     options_color.append(f"<p style='color:green; font-weight:bold;'>{option}</p>")
 
-if options:
-    selected_option = st.radio("Escolha a alternativa correta:", options)
+if options_color:
+    selected_option = st.radio("Escolha a alternativa correta:", options_color)
 else:
     st.warning("Nenhuma alternativa disponível para esta pergunta.")
 
