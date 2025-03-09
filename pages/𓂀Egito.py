@@ -43,15 +43,15 @@ for i, option in enumerate(options_color):
 html_content += "</table>"
 
 # Exibe a tabela no Streamlit
-st.markdown(html_content, unsafe_allow_html=True)
+#st.markdown(html_content, unsafe_allow_html=True)
 
-#for i, option in enumerate(options_color):
-#    st.markdown(f"""
-#        <div style="display: inline-block; margin-right: 10px;">
-#            <input type="radio" name="alternativa" value="{i}" id="option_{i}">
-#            <label for="option_{i}" style="display: inline-block;">{option}</label>
-#        </div>
-#    """, unsafe_allow_html=True)
+for i, option in enumerate(options_color):
+    st.markdown(f"""
+        <div style="display: inline-block; margin-right: 10px;">
+            <input type="radio" name="alternativa" value="{i}" id="option_{i}">
+            <label for="option_{i}" style="display: inline-block;">{option}</label>
+        </div>
+    """, unsafe_allow_html=True)
     
 #if options_color:
 #    selected_option = st.radio("Escolha a alternativa correta:", options_color)
