@@ -69,7 +69,9 @@ with col1:
     if st.button("Pergunta Anterior"):
         if st.session_state.index > 0:
             st.session_state.index -= 1
+            st.experimental_rerun() 
 with col2:
     if st.button("Próxima Pergunta"):
         if st.session_state.index < len(df) - 1:
             st.session_state.index += 1
+            st.experimental_rerun() 
