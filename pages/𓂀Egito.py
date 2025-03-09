@@ -31,15 +31,15 @@ for option in options:
 for i, option in enumerate(options_color):
     st.markdown(f"""
         <div>
-            <label>{option}</label>
             <input type="radio" name="alternativa" value="{i}">
+            <label>{option}</label>
         </div>
     """, unsafe_allow_html=True)
     
-if options_color:
-    selected_option = st.radio("Escolha a alternativa correta:", options_color)
-else:
-    st.warning("Nenhuma alternativa disponível para esta pergunta.")
+#if options_color:
+#    selected_option = st.radio("Escolha a alternativa correta:", options_color)
+#else:
+#    st.warning("Nenhuma alternativa disponível para esta pergunta.")
 
 
 # Mostrar a resposta correta
