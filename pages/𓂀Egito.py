@@ -3,6 +3,9 @@ import pandas as pd
 
 # Função para carregar os dados do CSV
 # https://share.streamlit.io/
+# https://app.estuda.com/questoes
+# https://gabariteenem.com.br/questoes/
+# https://www.kuadro.com.br/gabarito/enem/2020/historia/enem-2020-prova-azul-sexto-rei-sumrio-governante-e/59534
 
 def load_data():
     df = pd.read_csv("enem.csv", sep=';', header=None, names=['Tema', 'Questao', 'ID', 'Origem', 'Pergunta', 'Alternativas', 'Resposta'])
